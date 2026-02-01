@@ -1,0 +1,21 @@
+{
+  "@@locale": "zh_CN",
+  "appName": "CS 分贝仪",
+  "decibelMeter": "分贝仪",
+  "current": "当前",
+  "peak": "峰值 {value} dB",
+  "measuring": "正在测量…",
+  "tapToStart": "点击下方按钮开始测量",
+  "startMeasuring": "开始测量",
+  "stop": "停止",
+  "permissionDenied": "请允许使用麦克风以测量环境音量",
+  "micError": "无法启动麦克风: {error}",
+  "average": "平均值: {value} dB",
+  "percentile": "P{percentile}: {value} dB",
+  "statistics": "统计信息",
+  "min": "最小值: {value} dB",
+  "initializing": "初始化中...",
+  "measurementInfo": "测量说明",
+  "measurementRules": "测量规则",
+  "measurementRulesContent": "• 录音开始3秒后才开始正式测量\n• 此延迟确保麦克风稳定，获得准确读数\n• 统计信息（最小值、平均值、百分位值）仅在3秒延迟后计算\n• 当前分贝值在整个测量过程中实时显示\n• 为获得最佳结果，测量时请保持设备稳定"
+}

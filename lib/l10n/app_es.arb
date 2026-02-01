@@ -1,0 +1,21 @@
+{
+  "@@locale": "es",
+  "appName": "CS Medidor de Decibelios",
+  "decibelMeter": "Medidor de Decibelios",
+  "current": "Actual",
+  "peak": "Pico {value} dB",
+  "measuring": "Midiendo...",
+  "tapToStart": "Toca el botón de abajo para comenzar a medir",
+  "startMeasuring": "Comenzar Medición",
+  "stop": "Detener",
+  "permissionDenied": "Por favor permite el acceso al micrófono para medir el nivel de sonido ambiente",
+  "micError": "No se puede iniciar el micrófono: {error}",
+  "average": "Promedio: {value} dB",
+  "percentile": "P{percentile}: {value} dB",
+  "statistics": "Estadísticas",
+  "min": "Mín: {value} dB",
+  "initializing": "Inicializando...",
+  "measurementInfo": "Información de Medición",
+  "measurementRules": "Reglas de Medición",
+  "measurementRulesContent": "• La medición comienza 3 segundos después de iniciar la grabación\n• Este retraso asegura lecturas precisas permitiendo que el micrófono se estabilice\n• Las estadísticas (mín, promedio, percentiles) se calculan solo después del período inicial de 3 segundos\n• El valor de decibelios actual se muestra en tiempo real durante toda la medición\n• Para mejores resultados, mantenga el dispositivo estable durante la medición"
+}

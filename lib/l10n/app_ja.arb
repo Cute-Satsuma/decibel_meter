@@ -1,0 +1,21 @@
+{
+  "@@locale": "ja",
+  "appName": "CS デシベルメーター",
+  "decibelMeter": "デシベルメーター",
+  "current": "現在",
+  "peak": "ピーク {value} dB",
+  "measuring": "測定中...",
+  "tapToStart": "下のボタンをタップして測定を開始",
+  "startMeasuring": "測定開始",
+  "stop": "停止",
+  "permissionDenied": "周囲の音レベルを測定するには、マイクへのアクセスを許可してください",
+  "micError": "マイクを開始できません: {error}",
+  "average": "平均: {value} dB",
+  "percentile": "P{percentile}: {value} dB",
+  "statistics": "統計",
+  "min": "最小: {value} dB",
+  "initializing": "初期化中...",
+  "measurementInfo": "測定情報",
+  "measurementRules": "測定ルール",
+  "measurementRulesContent": "• 録音開始から3秒後に測定を開始します\n• この遅延により、マイクが安定し、正確な測定値が得られます\n• 統計情報（最小値、平均値、パーセンタイル）は初期3秒間の後でのみ計算されます\n• 現在のデシベル値は測定全体を通じてリアルタイムで表示されます\n• 最良の結果を得るには、測定中はデバイスを安定させてください"
+}

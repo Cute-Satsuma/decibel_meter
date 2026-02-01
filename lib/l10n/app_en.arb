@@ -1,0 +1,103 @@
+{
+  "@@locale": "en",
+  "appName": "CS Decibel Meter",
+  "@appName": {
+    "description": "Application name"
+  },
+  "decibelMeter": "Decibel Meter",
+  "@decibelMeter": {
+    "description": "Main title"
+  },
+  "current": "Current",
+  "@current": {
+    "description": "Current decibel label"
+  },
+  "peak": "Peak {value} dB",
+  "@peak": {
+    "description": "Peak decibel value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "measuring": "Measuring...",
+  "@measuring": {
+    "description": "Status when measuring"
+  },
+  "tapToStart": "Tap the button below to start measuring",
+  "@tapToStart": {
+    "description": "Instruction text"
+  },
+  "startMeasuring": "Start Measuring",
+  "@startMeasuring": {
+    "description": "Start button text"
+  },
+  "stop": "Stop",
+  "@stop": {
+    "description": "Stop button text"
+  },
+  "permissionDenied": "Please allow microphone access to measure ambient sound level",
+  "@permissionDenied": {
+    "description": "Permission error message"
+  },
+  "micError": "Unable to start microphone: {error}",
+  "@micError": {
+    "description": "Microphone error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "average": "Average: {value} dB",
+  "@average": {
+    "description": "Average decibel value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "percentile": "P{percentile}: {value} dB",
+  "@percentile": {
+    "description": "Percentile value",
+    "placeholders": {
+      "percentile": {
+        "type": "int"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "statistics": "Statistics",
+  "@statistics": {
+    "description": "Statistics section title"
+  },
+  "min": "Min: {value} dB",
+  "@min": {
+    "description": "Minimum value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "initializing": "Initializing...",
+  "@initializing": {
+    "description": "Status when initializing (3 second delay)"
+  },
+  "measurementInfo": "Measurement Information",
+  "@measurementInfo": {
+    "description": "Info button tooltip"
+  },
+  "measurementRules": "Measurement Rules",
+  "@measurementRules": {
+    "description": "Dialog title for measurement rules"
+  },
+  "measurementRulesContent": "• Measurement starts 3 seconds after recording begins\n• This delay ensures accurate readings by allowing the microphone to stabilize\n• Statistics (min, average, percentiles) are calculated only after the initial 3-second period\n• Current decibel value is displayed in real-time throughout the measurement\n• For best results, keep the device steady during measurement",
+  "@measurementRulesContent": {
+    "description": "Content of measurement rules dialog"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "@@locale": "de",
+  "appName": "CS Dezibel-Messgerät",
+  "decibelMeter": "Dezibel-Messgerät",
+  "current": "Aktuell",
+  "peak": "Spitze {value} dB",
+  "measuring": "Messen...",
+  "tapToStart": "Tippen Sie auf die Schaltfläche unten, um mit der Messung zu beginnen",
+  "startMeasuring": "Messung Starten",
+  "stop": "Stoppen",
+  "permissionDenied": "Bitte erlauben Sie den Mikrofonzugriff, um den Umgebungsschallpegel zu messen",
+  "micError": "Mikrofon kann nicht gestartet werden: {error}",
+  "average": "Durchschnitt: {value} dB",
+  "percentile": "P{percentile}: {value} dB",
+  "statistics": "Statistiken",
+  "min": "Min: {value} dB",
+  "initializing": "Initialisierung...",
+  "measurementInfo": "Messinformationen",
+  "measurementRules": "Messregeln",
+  "measurementRulesContent": "• Die Messung beginnt 3 Sekunden nach Beginn der Aufnahme\n• Diese Verzögerung gewährleistet genaue Messwerte, indem das Mikrofon Zeit zur Stabilisierung erhält\n• Statistiken (Min, Durchschnitt, Perzentile) werden nur nach der anfänglichen 3-Sekunden-Periode berechnet\n• Der aktuelle Dezibelwert wird während der gesamten Messung in Echtzeit angezeigt\n• Für beste Ergebnisse halten Sie das Gerät während der Messung ruhig"
+}
