@@ -73,4 +73,36 @@ class AppLocalizationsBn extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• রেকর্ডিং শুরু হওয়ার 3 সেকেন্ড পরে মাপা শুরু হয়\n• এই বিলম্ব মাইক্রোফোনকে স্থিতিশীল করতে দিয়ে সঠিক রিডিং নিশ্চিত করে\n• পরিসংখ্যান (সর্বনিম্ন, গড়, পার্সেন্টাইল) শুধুমাত্র প্রাথমিক 3-সেকেন্ড সময়ের পরে গণনা করা হয়\n• বর্তমান ডেসিবেল মান পুরো মাপার সময় বাস্তব সময়ে প্রদর্শিত হয়\n• সেরা ফলাফলের জন্য, মাপার সময় ডিভাইস স্থির রাখুন';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

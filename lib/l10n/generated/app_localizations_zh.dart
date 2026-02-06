@@ -44,7 +44,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String average(String value) {
-    return '平均值: $value dB';
+    return '平均值';
   }
 
   @override
@@ -72,6 +72,36 @@ class AppLocalizationsZh extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• 录音开始3秒后才开始正式测量\n• 此延迟确保麦克风稳定，获得准确读数\n• 统计信息（最小值、平均值、百分位值）仅在3秒延迟后计算\n• 当前分贝值在整个测量过程中实时显示\n• 为获得最佳结果，测量时请保持设备稳定';
+
+  @override
+  String get history => '历史记录';
+
+  @override
+  String get noHistoryRecords => '暂无历史记录';
+
+  @override
+  String get deleteRecord => '删除记录';
+
+  @override
+  String get deleteRecordConfirm => '确定要删除这条记录吗？';
+
+  @override
+  String get deleteAllRecords => '删除所有记录';
+
+  @override
+  String get deleteAllRecordsConfirm => '确定要删除所有记录吗？此操作无法撤销。';
+
+  @override
+  String get recordDeleted => '记录已删除';
+
+  @override
+  String get allRecordsDeleted => '所有记录已删除';
+
+  @override
+  String get cancel => '取消';
+
+  @override
+  String get delete => '删除';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

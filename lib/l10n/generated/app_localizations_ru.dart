@@ -73,4 +73,36 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• Измерение начинается через 3 секунды после начала записи\n• Эта задержка обеспечивает точные показания, позволяя микрофону стабилизироваться\n• Статистика (мин, среднее, процентили) рассчитывается только после начального 3-секундного периода\n• Текущее значение децибел отображается в реальном времени на протяжении всего измерения\n• Для лучших результатов держите устройство неподвижно во время измерения';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

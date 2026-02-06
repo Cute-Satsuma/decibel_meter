@@ -74,4 +74,36 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• Die Messung beginnt 3 Sekunden nach Beginn der Aufnahme\n• Diese Verzögerung gewährleistet genaue Messwerte, indem das Mikrofon Zeit zur Stabilisierung erhält\n• Statistiken (Min, Durchschnitt, Perzentile) werden nur nach der anfänglichen 3-Sekunden-Periode berechnet\n• Der aktuelle Dezibelwert wird während der gesamten Messung in Echtzeit angezeigt\n• Für beste Ergebnisse halten Sie das Gerät während der Messung ruhig';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

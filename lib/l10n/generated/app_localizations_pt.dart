@@ -73,6 +73,38 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• A medição começa 3 segundos após o início da gravação\n• Este atraso garante leituras precisas permitindo que o microfone se estabilize\n• As estatísticas (mín, média, percentis) são calculadas apenas após o período inicial de 3 segundos\n• O valor de decibéis atual é exibido em tempo real durante toda a medição\n• Para melhores resultados, mantenha o dispositivo estável durante a medição';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).

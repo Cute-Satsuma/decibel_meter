@@ -1,7 +1,7 @@
 # Google Play 商品详情
 
 ## 简短说明（Short Description）
-简单易用的分贝测量工具，无广告，实时显示声音分贝值和统计分析
+无广告分贝测量工具，实时显示声音分贝值和统计分析
 
 ## 完整说明（Full Description）
 

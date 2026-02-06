@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:record/record.dart';
 import 'package:decibel_meter/l10n/generated/app_localizations.dart';
+import 'package:decibel_meter/database/database_helper.dart';
+import 'package:decibel_meter/database/measurement_record.dart';
+import 'package:decibel_meter/history/history_page.dart';
 
 void main() {
   runApp(const DecibelMeterApp());
@@ -78,6 +81,8 @@ class _DecibelMeterPageState extends State<DecibelMeterPage> {
   Timer? _measurementDelayTimer; // 3秒延迟计时器
   Timer? _countdownTimer; // 倒计时更新器
   final List<double> _dbHistory = []; // 存储历史数据用于统计
+  final DatabaseHelper _dbHelper = DatabaseHelper.instance;
+  DateTime? _measurementStartTime; // 测量开始时间
 
   /// 将 dBFS（相对满量程分贝）映射为近似环境声压级显示值（约 0–120 dB）
   static double _dbfsToDisplayDb(double dbfs) {
@@ -120,6 +125,7 @@ class _DecibelMeterPageState extends State<DecibelMeterPage> {
       _maxDb = 0;
       _minDb = null; // 重置为 null，从第一次测量值开始
       _dbHistory.clear(); // 清空历史数据
+      _measurementStartTime = DateTime.now(); // 记录开始时间
     });
 
     final hasPermission = await _recorder.hasPermission();
@@ -241,11 +247,36 @@ class _DecibelMeterPageState extends State<DecibelMeterPage> {
     try {
       await _recorder.stop();
     } catch (_) {}
+    
+    // 保存测量记录到数据库
+    if (_isMeasuring && _dbHistory.isNotEmpty && _measurementStartTime != null) {
+      final duration = DateTime.now().difference(_measurementStartTime!).inSeconds;
+      if (duration > 0 && _minDb != null) {
+        try {
+          final record = MeasurementRecord(
+            timestamp: _measurementStartTime!.millisecondsSinceEpoch,
+            duration: duration,
+            minDb: _minDb!,
+            maxDb: _maxDb,
+            avgDb: _getAverage(),
+            p50Db: _getPercentile(50),
+            p90Db: _getPercentile(90),
+            p95Db: _getPercentile(95),
+          );
+          await _dbHelper.insertRecord(record);
+        } catch (e) {
+          // 保存失败不影响停止测量
+          debugPrint('保存测量记录失败: $e');
+        }
+      }
+    }
+    
     if (mounted) {
       setState(() {
         _isRecording = false;
         _isMeasuring = false;
         _countdown = 0;
+        _measurementStartTime = null;
       });
     }
   }
@@ -287,31 +318,59 @@ class _DecibelMeterPageState extends State<DecibelMeterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            children: [
-              const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Column(
                 children: [
-                  Text(
-                    AppLocalizations.of(context)!.decibelMeter,
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          fontWeight: FontWeight.w600,
+                  const SizedBox(height: 24),
+                  // 标题行：标题居中，历史记录按钮在右侧
+                  Row(
+                    children: [
+                      // 左侧占位（保持对称）
+                      SizedBox(
+                        width: 48, // IconButton 的宽度
+                      ),
+                      // 中间标题（居中）
+                      Expanded(
+                        child: Center(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                AppLocalizations.of(context)!.decibelMeter,
+                                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                              ),
+                              const SizedBox(width: 8),
+                              IconButton(
+                                icon: const Icon(Icons.info_outline, size: 20, color: Colors.red),
+                                onPressed: () => _showMeasurementInfo(context),
+                                tooltip: AppLocalizations.of(context)!.measurementInfo,
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                              ),
+                            ],
+                          ),
                         ),
+                      ),
+                      // 右侧历史记录按钮
+                      IconButton(
+                        icon: const Icon(Icons.history),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const HistoryPage(),
+                            ),
+                          );
+                        },
+                        tooltip: AppLocalizations.of(context)!.history,
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 8),
-                  IconButton(
-                    icon: const Icon(Icons.info_outline, size: 20, color: Colors.red),
-                    onPressed: () => _showMeasurementInfo(context),
-                    tooltip: AppLocalizations.of(context)!.measurementInfo,
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 32),
+                  const SizedBox(height: 32),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -372,8 +431,10 @@ class _DecibelMeterPageState extends State<DecibelMeterPage> {
                   ),
                 ),
               ),
-            ],
-          ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -72,4 +72,36 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• 録音開始から3秒後に測定を開始します\n• この遅延により、マイクが安定し、正確な測定値が得られます\n• 統計情報（最小値、平均値、パーセンタイル）は初期3秒間の後でのみ計算されます\n• 現在のデシベル値は測定全体を通じてリアルタイムで表示されます\n• 最良の結果を得るには、測定中はデバイスを安定させてください';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

@@ -1,7 +1,7 @@
 # Google Play Product Details (English)
 
 ## Short Description
-Simple decibel meter: ad-free, real-time sound measurement and statistics
+Ad-free decibel meter with real-time measurement and statistical analysis
 
 ## Full Description
 

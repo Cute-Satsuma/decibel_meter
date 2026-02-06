@@ -17,5 +17,16 @@
   "initializing": "初始化中...",
   "measurementInfo": "测量说明",
   "measurementRules": "测量规则",
-  "measurementRulesContent": "• 录音开始3秒后才开始正式测量\n• 此延迟确保麦克风稳定，获得准确读数\n• 统计信息（最小值、平均值、百分位值）仅在3秒延迟后计算\n• 当前分贝值在整个测量过程中实时显示\n• 为获得最佳结果，测量时请保持设备稳定"
+  "measurementRulesContent": "• 录音开始3秒后才开始正式测量\n• 此延迟确保麦克风稳定，获得准确读数\n• 统计信息（最小值、平均值、百分位值）仅在3秒延迟后计算\n• 当前分贝值在整个测量过程中实时显示\n• 为获得最佳结果，测量时请保持设备稳定",
+  "history": "历史记录",
+  "noHistoryRecords": "暂无历史记录",
+  "deleteRecord": "删除记录",
+  "deleteRecordConfirm": "确定要删除这条记录吗？",
+  "deleteAllRecords": "删除所有记录",
+  "deleteAllRecordsConfirm": "确定要删除所有记录吗？此操作无法撤销。",
+  "recordDeleted": "记录已删除",
+  "allRecordsDeleted": "所有记录已删除",
+  "cancel": "取消",
+  "delete": "删除",
+  "average": "平均值"
 }

@@ -73,4 +73,36 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• La medición comienza 3 segundos después de iniciar la grabación\n• Este retraso asegura lecturas precisas permitiendo que el micrófono se estabilice\n• Las estadísticas (mín, promedio, percentiles) se calculan solo después del período inicial de 3 segundos\n• El valor de decibelios actual se muestra en tiempo real durante toda la medición\n• Para mejores resultados, mantenga el dispositivo estable durante la medición';
+
+  @override
+  String get history => 'Historial';
+
+  @override
+  String get noHistoryRecords => 'No hay registros históricos';
+
+  @override
+  String get deleteRecord => 'Eliminar Registro';
+
+  @override
+  String get deleteRecordConfirm =>
+      '¿Está seguro de que desea eliminar este registro?';
+
+  @override
+  String get deleteAllRecords => 'Eliminar Todos los Registros';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      '¿Está seguro de que desea eliminar todos los registros? Esta acción no se puede deshacer.';
+
+  @override
+  String get recordDeleted => 'Registro eliminado';
+
+  @override
+  String get allRecordsDeleted => 'Todos los registros eliminados';
+
+  @override
+  String get cancel => 'Cancelar';
+
+  @override
+  String get delete => 'Eliminar';
 }

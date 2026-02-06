@@ -73,4 +73,36 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• रिकॉर्डिंग शुरू होने के 3 सेकंड बाद माप शुरू होता है\n• यह देरी माइक्रोफोन को स्थिर करने की अनुमति देकर सटीक रीडिंग सुनिश्चित करती है\n• आंकड़े (न्यूनतम, औसत, प्रतिशत) केवल प्रारंभिक 3-सेकंड अवधि के बाद गणना की जाती है\n• वर्तमान डेसिबल मान पूरे माप के दौरान वास्तविक समय में प्रदर्शित होता है\n• सर्वोत्तम परिणामों के लिए, माप के दौरान डिवाइस को स्थिर रखें';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

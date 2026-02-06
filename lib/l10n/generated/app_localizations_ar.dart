@@ -73,4 +73,36 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get measurementRulesContent =>
       '• يبدأ القياس بعد 3 ثوانٍ من بدء التسجيل\n• يضمن هذا التأخير قراءات دقيقة من خلال السماح للميكروفون بالاستقرار\n• يتم حساب الإحصائيات (الحد الأدنى، المتوسط، النسب المئوية) فقط بعد الفترة الأولية البالغة 3 ثوانٍ\n• يتم عرض قيمة الديسيبل الحالية في الوقت الفعلي طوال عملية القياس\n• للحصول على أفضل النتائج، حافظ على ثبات الجهاز أثناء القياس';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryRecords => 'No history records';
+
+  @override
+  String get deleteRecord => 'Delete Record';
+
+  @override
+  String get deleteRecordConfirm =>
+      'Are you sure you want to delete this record?';
+
+  @override
+  String get deleteAllRecords => 'Delete All Records';
+
+  @override
+  String get deleteAllRecordsConfirm =>
+      'Are you sure you want to delete all records? This action cannot be undone.';
+
+  @override
+  String get recordDeleted => 'Record deleted';
+
+  @override
+  String get allRecordsDeleted => 'All records deleted';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get delete => 'Delete';
 }

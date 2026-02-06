@@ -223,6 +223,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'• Measurement starts 3 seconds after recording begins\n• This delay ensures accurate readings by allowing the microphone to stabilize\n• Statistics (min, average, percentiles) are calculated only after the initial 3-second period\n• Current decibel value is displayed in real-time throughout the measurement\n• For best results, keep the device steady during measurement'**
   String get measurementRulesContent;
+
+  /// History page title
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get history;
+
+  /// Message when no history records
+  ///
+  /// In en, this message translates to:
+  /// **'No history records'**
+  String get noHistoryRecords;
+
+  /// Delete record dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Record'**
+  String get deleteRecord;
+
+  /// Delete record confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this record?'**
+  String get deleteRecordConfirm;
+
+  /// Delete all records action
+  ///
+  /// In en, this message translates to:
+  /// **'Delete All Records'**
+  String get deleteAllRecords;
+
+  /// Delete all records confirmation message
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete all records? This action cannot be undone.'**
+  String get deleteAllRecordsConfirm;
+
+  /// Message when record is deleted
+  ///
+  /// In en, this message translates to:
+  /// **'Record deleted'**
+  String get recordDeleted;
+
+  /// Message when all records are deleted
+  ///
+  /// In en, this message translates to:
+  /// **'All records deleted'**
+  String get allRecordsDeleted;
+
+  /// Cancel button
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// Delete button
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
 }
 
 class _AppLocalizationsDelegate
