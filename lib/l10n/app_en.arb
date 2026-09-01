@@ -1,0 +1,213 @@
+{
+  "@@locale": "en",
+  "appName": "dB Meter",
+  "@appName": {
+    "description": "Application name"
+  },
+  "decibelMeter": "Decibel Meter",
+  "@decibelMeter": {
+    "description": "Main title"
+  },
+  "current": "Current",
+  "@current": {
+    "description": "Current decibel label"
+  },
+  "peak": "Peak: {value} dB",
+  "@peak": {
+    "description": "Peak decibel value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "measuring": "Measuring...",
+  "@measuring": {
+    "description": "Status when measuring"
+  },
+  "tapToStart": "Tap the button below to start measuring",
+  "@tapToStart": {
+    "description": "Instruction text in portrait"
+  },
+  "tapToStartLandscape": "Tap the button to start measuring",
+  "@tapToStartLandscape": {
+    "description": "Instruction text in landscape"
+  },
+  "startMeasuring": "Start Measuring",
+  "@startMeasuring": {
+    "description": "Start button text"
+  },
+  "stop": "Stop",
+  "@stop": {
+    "description": "Stop button text"
+  },
+  "permissionDenied": "Please allow microphone access to measure ambient sound level",
+  "@permissionDenied": {
+    "description": "Permission error message"
+  },
+  "micError": "Unable to start microphone: {error}",
+  "@micError": {
+    "description": "Microphone error message",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "average": "Avg: {value} dB",
+  "@average": {
+    "description": "Average decibel value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "percentile": "P{percentile}: {value} dB",
+  "@percentile": {
+    "description": "Percentile value",
+    "placeholders": {
+      "percentile": {
+        "type": "int"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "statistics": "Statistics",
+  "@statistics": {
+    "description": "Statistics section title"
+  },
+  "min": "Min: {value} dB",
+  "@min": {
+    "description": "Minimum value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "initializing": "Initializing...",
+  "@initializing": {
+    "description": "Status when initializing (3 second delay)"
+  },
+  "measurementInfo": "Measurement Information",
+  "@measurementInfo": {
+    "description": "Info button tooltip"
+  },
+  "measurementRules": "Measurement Rules",
+  "@measurementRules": {
+    "description": "Dialog title for measurement rules"
+  },
+  "measurementRulesContent": "• Measurement starts 3 seconds after recording begins\n• This delay ensures accurate readings by allowing the microphone to stabilize\n• Statistics (min, average, percentiles) are calculated only after the initial 3-second period\n• Current decibel value is displayed in real-time throughout the measurement\n• For best results, keep the device steady during measurement",
+  "@measurementRulesContent": {
+    "description": "Content of measurement rules dialog"
+  },
+  "history": "History",
+  "@history": {
+    "description": "History page title"
+  },
+  "noHistoryRecords": "No history records",
+  "@noHistoryRecords": {
+    "description": "Message when no history records"
+  },
+  "deleteRecord": "Delete Record",
+  "@deleteRecord": {
+    "description": "Delete record dialog title"
+  },
+  "deleteRecordConfirm": "Are you sure you want to delete this record?",
+  "@deleteRecordConfirm": {
+    "description": "Delete record confirmation message"
+  },
+  "deleteAllRecords": "Delete All Records",
+  "@deleteAllRecords": {
+    "description": "Delete all records action"
+  },
+  "deleteAllRecordsConfirm": "Are you sure you want to delete all records? This action cannot be undone.",
+  "@deleteAllRecordsConfirm": {
+    "description": "Delete all records confirmation message"
+  },
+  "recordDeleted": "Record deleted",
+  "@recordDeleted": {
+    "description": "Message when record is deleted"
+  },
+  "allRecordsDeleted": "All records deleted",
+  "@allRecordsDeleted": {
+    "description": "Message when all records are deleted"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "Settings sheet title"
+  },
+  "aboutTitle": "About",
+  "@aboutTitle": {
+    "description": "About section title"
+  },
+  "aboutContent": "Ambient sound level meter.\n\n• No ads and no account\n• History stays on this device\n• Microphone is used only while measuring\n• Readings are for everyday reference, not lab calibration",
+  "@aboutContent": {
+    "description": "About this app"
+  },
+  "brandTitle": "Brand",
+  "@brandTitle": {
+    "description": "Brand section title"
+  },
+  "brandContent": "Caju is a friendly indie app brand by Cute-Satsuma.",
+  "@brandContent": {
+    "description": "Brand description"
+  },
+  "brandTagline": "Cute-Satsuma · Caju",
+  "@brandTagline": {
+    "description": "Brand name line"
+  },
+  "versionLabel": "Version {version}",
+  "@versionLabel": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "buildLabel": "Build {build}",
+  "@buildLabel": {
+    "placeholders": {
+      "build": {
+        "type": "String"
+      }
+    }
+  },
+  "privacyPolicyLink": "Privacy policy",
+  "@privacyPolicyLink": {
+    "description": "Link to privacy policy"
+  },
+  "productPageLink": "Product page",
+  "@productPageLink": {
+    "description": "Link to product landing page"
+  },
+  "themeColor": "Color",
+  "@themeColor": {
+    "description": "Theme color section title"
+  },
+  "themeOrange": "Orange",
+  "themeGreen": "Green",
+  "themeTeal": "Teal",
+  "themeBlue": "Blue",
+  "themeSlate": "Slate",
+  "themePaper": "Paper",
+  "themePaperFilter": "Paper texture",
+  "themeGuideTitle": "Change the look",
+  "themeGuideBody": "Tap here to switch colors, appearance, and fonts.",
+  "themeGotIt": "Got it",
+  "themePickerTitle": "Pick a color you like",
+  "themePickerBody": "Tap a color to preview. You can change this later in Settings.",
+  "themePickerContinue": "Choose this",
+  "themePickerPaperBody": "Adds a light paper grain to the screen."
+}

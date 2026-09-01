@@ -1,0 +1,36 @@
+#define MyAppName "@@APP_DISPLAY_NAME@@"
+#define MyAppSlug "@@APP_SLUG@@"
+#define MyAppVersion "@@APP_VERSION@@"
+#define MyAppExeName "@@APP_EXE@@"
+
+[Setup]
+AppId={{@@WINDOWS_APP_ID@@}
+AppName={#MyAppName}
+AppVersion={#MyAppVersion}
+DefaultDirName={autopf}\{#MyAppName}
+DisableProgramGroupPage=yes
+OutputDir=..\dist\github
+OutputBaseFilename={#MyAppSlug}-windows
+Compression=lzma2
+SolidCompression=yes
+WizardStyle=modern
+ArchitecturesAllowed=x64compatible
+ArchitecturesInstallIn64BitMode=x64compatible
+PrivilegesRequired=lowest
+UninstallDisplayIcon={app}\{#MyAppExeName}
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional icons:"; Flags: unchecked
+
+[Files]
+Source: "..\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+[Icons]
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+
+[Run]
+Filename: "{app}\{#MyAppExeName}"; Description: "Launch {#MyAppName}"; Flags: nowait postinstall skipifsilent

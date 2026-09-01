@@ -1,0 +1,3 @@
+/* Localized versions of Info.plist keys */
+CFBundleDisplayName = "分贝仪 Caju";
+NSMicrophoneUsageDescription = "分贝仪需要访问麦克风以测量环境音量";

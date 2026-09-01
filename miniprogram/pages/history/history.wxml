@@ -1,0 +1,54 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">历史记录</text>
+    <view class="delete-all-btn" wx:if="{{records.length > 0}}" bindtap="deleteAllRecords">
+      <text>删除全部</text>
+    </view>
+  </view>
+
+  <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="onReachBottom">
+    <view wx:if="{{records.length === 0}}" class="empty-state">
+      <image class="empty-icon" src="/images/empty.png"></image>
+      <text class="empty-text">暂无历史记录</text>
+    </view>
+
+    <view wx:else class="records-list">
+      <view class="record-item" wx:for="{{records}}" wx:key="id">
+        <view class="record-header">
+          <text class="record-time">{{formatDate(item.timestamp)}}</text>
+          <text class="record-duration">{{formatDuration(item.duration)}}</text>
+        </view>
+        <view class="record-stats">
+          <view class="stat-chip" style="color: {{getColorForDb(item.minDb)}}; border-color: {{getColorForDb(item.minDb)}}">
+            <text>最小值: {{item.minDb}} dB</text>
+          </view>
+          <view class="stat-chip" style="color: {{getColorForDb(item.avgDb)}}; border-color: {{getColorForDb(item.avgDb)}}">
+            <text>平均值: {{item.avgDb}} dB</text>
+          </view>
+          <view class="stat-chip" style="color: {{getColorForDb(item.maxDb)}}; border-color: {{getColorForDb(item.maxDb)}}">
+            <text>峰值: {{item.maxDb}} dB</text>
+          </view>
+          <view class="stat-chip" style="color: {{getColorForDb(item.p50Db)}}; border-color: {{getColorForDb(item.p50Db)}}">
+            <text>P50: {{item.p50Db}} dB</text>
+          </view>
+          <view class="stat-chip" style="color: {{getColorForDb(item.p90Db)}}; border-color: {{getColorForDb(item.p90Db)}}">
+            <text>P90: {{item.p90Db}} dB</text>
+          </view>
+          <view class="stat-chip" style="color: {{getColorForDb(item.p95Db)}}; border-color: {{getColorForDb(item.p95Db)}}">
+            <text>P95: {{item.p95Db}} dB</text>
+          </view>
+        </view>
+        <view class="record-actions">
+          <view class="delete-btn" bindtap="deleteRecord" data-id="{{item.id}}">
+            <text>删除</text>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{isLoading && hasMore}}" class="loading">
+        <text>加载中...</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

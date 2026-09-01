@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dB Meter Caju – Sound Meter &amp; Noise Meter</title>
+    <meta name="description" content="Sound meter and decibel meter for ambient noise in dB, with live min, avg, peak, percentiles and history. Microphone is used only while measuring.">
+    <meta name="keywords" content="sound meter, decibel meter, noise meter, dB meter, noise level, SPL, ad-free, 分贝仪, 噪音计">
+    <link rel="canonical" href="https://cute-satsuma.github.io/decibel_meter/">
+    <meta property="og:title" content="dB Meter Caju – Sound Meter">
+    <meta property="og:description" content="Measure ambient noise in dB with live min, avg, peak, percentiles and history. Data stays on your phone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cute-satsuma.github.io/decibel_meter/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/app_icon_512x512.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="dB Meter Caju – Sound Meter">
+    <meta name="twitter:description" content="Noise meter with live dB, statistics and history. Data stays on your phone.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/app_icon_512x512.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/icons/icon_48.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "dB Meter Caju",
+      "alternateName": ["分贝仪 Caju", "噪音计 Caju"],
+      "operatingSystem": "Android",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Sound meter and decibel meter for measuring ambient noise in dB.",
+      "url": "https://cute-satsuma.github.io/decibel_meter/",
+      "image": "https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/app_icon_512x512.png",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter"
+    }
+    </script>
+    <style>
+        :root {
+            --green: #2E7D32;
+            --green-soft: #81C784;
+            --bg: #f4f7f2;
+            --card: #ffffff;
+            --text: #1b241c;
+            --muted: #5d6b5e;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(180deg, #e8f5e9 0%, var(--bg) 100%);
+            padding: 48px 20px 32px;
+        }
+        .wrap { max-width: 980px; margin: 0 auto; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--green);
+            text-decoration: none;
+        }
+        .brand img { width: 44px; height: 44px; border-radius: 12px; }
+        .lang {
+            border: 1.5px solid var(--green);
+            color: var(--green);
+            background: #fff;
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            line-height: 1.2;
+            margin: 28px 0 12px;
+        }
+        .lead { color: var(--muted); font-size: 1.08rem; max-width: 640px; }
+        .cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin: 24px 0 8px;
+        }
+        .play-badge img { height: 60px; }
+        .web-btn {
+            display: inline-flex;
+            align-items: center;
+            height: 40px;
+            margin: 10px 0;
+            padding: 0 18px;
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 28px 0 8px;
+        }
+        .screens img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.16);
+            background: #fff;
+        }
+        section { padding: 12px 20px 28px; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 1px 0 rgba(0,0,0,.04);
+        }
+        .card h3 { margin: 0 0 8px; color: var(--green); font-size: 1.05rem; }
+        .card p { margin: 0; color: var(--muted); }
+        footer {
+            padding: 28px 20px 40px;
+            color: var(--muted);
+            font-size: .95rem;
+        }
+        footer a { color: var(--green); }
+        [data-lang="zh"] { display: none; }
+        html[lang="zh-CN"] [data-lang="en"] { display: none; }
+        html[lang="zh-CN"] [data-lang="zh"] { display: block; }
+        html[lang="zh-CN"] h1[data-lang="zh"],
+        html[lang="zh-CN"] .lead[data-lang="zh"],
+        html[lang="zh-CN"] a.play-badge[data-lang="zh"],
+        html[lang="zh-CN"] a.web-btn[data-lang="zh"] { display: inline-flex; }
+        @media (max-width: 720px) {
+            .screens { grid-template-columns: 1fr; max-width: 320px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="wrap">
+            <header>
+                <a class="brand" href="./">
+                    <img src="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/app_icon_512x512.png" alt="Caju icon">
+                    <span>dB Meter Caju</span>
+                </a>
+                <button class="lang" type="button" id="langBtn">中文</button>
+            </header>
+            <h1 data-lang="en">Sound meter for everyday noise in dB.</h1>
+            <h1 data-lang="zh">分贝仪与噪音计，随时测环境噪音。</h1>
+            <p class="lead" data-lang="en">Live dB with min, avg, peak and percentiles. Portrait and landscape. Microphone is used only while you are measuring.</p>
+            <p class="lead" data-lang="zh">实时显示分贝值，以及最小、平均、峰值和百分位。支持横屏。仅在测量时使用麦克风。</p>
+            <div class="cta">
+                <a class="play-badge" data-lang="en" href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter" rel="noopener" target="_blank">
+                    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+                </a>
+                <a class="play-badge" data-lang="zh" href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter" rel="noopener" target="_blank">
+                    <img alt="下载应用，请到 Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/zh-cn_badge_web_generic.png">
+                </a>
+                <a class="web-btn" data-lang="en" href="./app/">Open web app</a>
+                <a class="web-btn" data-lang="zh" href="./app/">打开网页版</a>
+            </div>
+            <div class="screens">
+                <img src="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/screenshot_phone_1.png" alt="Caju sound meter home">
+                <img src="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/screenshot_phone_2.png" alt="Live decibel measurement">
+                <img src="https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/screenshot_phone_5.png" alt="Measurement history">
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="wrap cards">
+            <article class="card">
+                <h3 data-lang="en">Live dB reading</h3>
+                <h3 data-lang="zh">实时分贝</h3>
+                <p data-lang="en">Start with one tap. See current noise level as a sound meter / SPL meter.</p>
+                <p data-lang="zh">一键开始，像专业噪音计一样查看当前环境声压级。</p>
+            </article>
+            <article class="card">
+                <h3 data-lang="en">Stats that matter</h3>
+                <h3 data-lang="zh">有用的统计</h3>
+                <p data-lang="en">Min, avg, peak plus P50 / P90 / P95 for noise distribution, not just a single number.</p>
+                <p data-lang="zh">最小、平均、峰值，以及 P50 / P90 / P95，而不只是一个瞬时数字。</p>
+            </article>
+            <article class="card">
+                <h3 data-lang="en">Private by design</h3>
+                <h3 data-lang="zh">默认隐私</h3>
+                <p data-lang="en">No ads, no tracking SDK. History stays on your phone and is never uploaded.</p>
+                <p data-lang="zh">无广告、无追踪。历史记录只存在手机本地，不会上传。</p>
+            </article>
+        </div>
+    </section>
+    <section>
+        <div class="wrap">
+            <article class="card">
+                <h3 data-lang="en">FAQ</h3>
+                <h3 data-lang="zh">常见问题</h3>
+                <p data-lang="en"><strong>Is this a professional SPL meter?</strong> Caju is a phone sound meter for everyday noise checks (home, office, street). Phone microphones vary, so treat readings as a useful estimate, not lab-grade calibration.</p>
+                <p data-lang="zh"><strong>这是专业声级计吗？</strong> Caju 是手机分贝仪 / 噪音计，适合家里、办公室、路边的日常测量。手机麦克风差异较大，读数适合参考，不能替代实验室校准设备。</p>
+                <p data-lang="en" style="margin-top:12px"><strong>Does it record audio?</strong> No. The microphone is used only to compute dB while measuring. History stays on the device.</p>
+                <p data-lang="zh" style="margin-top:12px"><strong>会录音吗？</strong> 不会。麦克风只在测量时用来计算分贝。历史记录只存在本机。</p>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div class="wrap">
+            <p data-lang="en">dB Meter Caju · Android · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="./app/">Web app</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">Privacy Policy</a></p>
+            <p data-lang="zh">分贝仪 Caju · Android · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="./app/">网页版</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">隐私政策</a></p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('langBtn');
+        function setLang(lang) {
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            btn.textContent = lang === 'zh' ? 'EN' : '中文';
+        }
+        const preferZh = (navigator.language || '').toLowerCase().startsWith('zh');
+        setLang(preferZh ? 'zh' : 'en');
+        btn.addEventListener('click', () => {
+            setLang(document.documentElement.lang === 'zh-CN' ? 'en' : 'zh');
+        });
+    </script>
+</body>
+</html>

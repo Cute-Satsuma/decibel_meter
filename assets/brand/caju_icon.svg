@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="squircle">
+      <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#squircle)">
+    <rect width="1024" height="1024" fill="#84CEF4"/>
+
+    <circle cx="512" cy="598" r="316" fill="#F28C27" stroke="#6F2F0E" stroke-width="28" stroke-linejoin="round"/>
+
+    <ellipse cx="402" cy="478" rx="96" ry="60" fill="#F7C56A" opacity="0.5"/>
+    <ellipse cx="372" cy="454" rx="34" ry="20" fill="#FFE9C2" opacity="0.75"/>
+
+    <circle cx="358" cy="732" r="7" fill="#D56A18"/>
+    <circle cx="396" cy="770" r="6" fill="#D56A18"/>
+    <circle cx="428" cy="740" r="5.5" fill="#D56A18"/>
+    <circle cx="702" cy="522" r="6" fill="#D56A18"/>
+    <circle cx="730" cy="556" r="5" fill="#D56A18"/>
+
+    <ellipse cx="456" cy="604" rx="27" ry="33" fill="#5C220C"/>
+    <ellipse cx="568" cy="604" rx="27" ry="33" fill="#5C220C"/>
+    <circle cx="466" cy="592" r="7.5" fill="#FFF6E8"/>
+    <circle cx="578" cy="592" r="7.5" fill="#FFF6E8"/>
+    <path d="M480 670 C512 700 548 700 580 670" fill="none" stroke="#5C220C" stroke-width="12" stroke-linecap="round"/>
+
+    <ellipse cx="512" cy="296" rx="20" ry="11" fill="#C45E16"/>
+    <path d="M512 242 v58" fill="none" stroke="#2A5418" stroke-width="30" stroke-linecap="round"/>
+    <path d="M512 244 v54" fill="none" stroke="#4A8F2C" stroke-width="18" stroke-linecap="round"/>
+
+    <g transform="translate(454 268) rotate(-24)">
+      <ellipse rx="50" ry="24" fill="#5EA33A" stroke="#2A5418" stroke-width="8"/>
+      <path d="M-28 0 H28" fill="none" stroke="#2A5418" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(570 268) rotate(24)">
+      <ellipse rx="50" ry="24" fill="#4E922E" stroke="#2A5418" stroke-width="8"/>
+      <path d="M-28 0 H28" fill="none" stroke="#2A5418" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

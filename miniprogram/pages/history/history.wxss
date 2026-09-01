@@ -1,0 +1,124 @@
+/* pages/history/history.wxss */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 24rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.delete-all-btn {
+  font-size: 28rpx;
+  color: #F44336;
+  padding: 8rpx 16rpx;
+}
+
+.scroll-view {
+  width: 100%;
+  height: calc(100vh - 120rpx);
+  box-sizing: border-box;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200rpx 0;
+}
+
+.empty-icon {
+  width: 128rpx;
+  height: 128rpx;
+  opacity: 0.3;
+  margin-bottom: 32rpx;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.records-list {
+  padding: 16rpx 24rpx;
+}
+
+.record-item {
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.record-time {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.record-duration {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.record-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.stat-chip {
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid;
+  font-size: 24rpx;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.record-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  padding: 8rpx 24rpx;
+  color: #F44336;
+  font-size: 28rpx;
+  border: 1rpx solid #F44336;
+  border-radius: 8rpx;
+}
+
+.loading {
+  text-align: center;
+  padding: 32rpx;
+  color: #999;
+  font-size: 28rpx;
+}

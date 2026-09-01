@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cute-satsuma.github.io/decibel_meter/sitemap.xml

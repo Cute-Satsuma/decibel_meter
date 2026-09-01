@@ -1,0 +1,4 @@
+# 微信小程序忽略文件
+project.private.config.json
+node_modules/
+*.log
