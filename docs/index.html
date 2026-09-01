@@ -23,13 +23,17 @@
       "@type": "SoftwareApplication",
       "name": "dB Meter Caju",
       "alternateName": ["分贝仪 Caju", "噪音计 Caju"],
-      "operatingSystem": "Android",
+      "operatingSystem": "Android, iOS",
       "applicationCategory": "UtilitiesApplication",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "description": "Sound meter and decibel meter for measuring ambient noise in dB.",
       "url": "https://cute-satsuma.github.io/decibel_meter/",
       "image": "https://raw.githubusercontent.com/Cute-Satsuma/decibel_meter/main/assets/google_play/app_icon_512x512.png",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter"
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter",
+      "installUrl": [
+        "https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter",
+        "https://apps.apple.com/app/id6804912429"
+      ]
     }
     </script>
     <style>
@@ -91,7 +95,10 @@
             align-items: center;
             margin: 24px 0 8px;
         }
+        .play-badge img,
+        .app-store-badge img { display: block; }
         .play-badge img { height: 60px; }
+        .app-store-badge img { height: 40px; }
         .web-btn {
             display: inline-flex;
             align-items: center;
@@ -142,6 +149,7 @@
         html[lang="zh-CN"] h1[data-lang="zh"],
         html[lang="zh-CN"] .lead[data-lang="zh"],
         html[lang="zh-CN"] a.play-badge[data-lang="zh"],
+        html[lang="zh-CN"] a.app-store-badge[data-lang="zh"],
         html[lang="zh-CN"] a.web-btn[data-lang="zh"] { display: inline-flex; }
         @media (max-width: 720px) {
             .screens { grid-template-columns: 1fr; max-width: 320px; }
@@ -163,6 +171,12 @@
             <p class="lead" data-lang="en">Live dB with min, avg, peak and percentiles. Portrait and landscape. Microphone is used only while you are measuring.</p>
             <p class="lead" data-lang="zh">实时显示分贝值，以及最小、平均、峰值和百分位。支持横屏。仅在测量时使用麦克风。</p>
             <div class="cta">
+                <a class="app-store-badge" data-lang="en" href="https://apps.apple.com/app/id6804912429" rel="noopener" target="_blank">
+                    <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83">
+                </a>
+                <a class="app-store-badge" data-lang="zh" href="https://apps.apple.com/app/id6804912429" rel="noopener" target="_blank">
+                    <img alt="在 App Store 中下载" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn?size=250x83">
+                </a>
                 <a class="play-badge" data-lang="en" href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter" rel="noopener" target="_blank">
                     <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
                 </a>
@@ -215,8 +229,8 @@
     </section>
     <footer>
         <div class="wrap">
-            <p data-lang="en">dB Meter Caju · Android · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="./app/">Web app</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">Privacy Policy</a></p>
-            <p data-lang="zh">分贝仪 Caju · Android · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="./app/">网页版</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">隐私政策</a></p>
+            <p data-lang="en">dB Meter Caju · Android · iPhone · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="https://apps.apple.com/app/id6804912429">App Store</a> · <a href="./app/">Web app</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">Privacy Policy</a></p>
+            <p data-lang="zh">分贝仪 Caju · Android · iPhone · Web · <a href="https://play.google.com/store/apps/details?id=com.bytemyth.decibel_meter">Google Play</a> · <a href="https://apps.apple.com/app/id6804912429">App Store</a> · <a href="./app/">网页版</a> · <a href="https://cute-satsuma.github.io/privacy/db-meter-caju/">隐私政策</a></p>
         </div>
     </footer>
     <script>
